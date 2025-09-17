@@ -1,4 +1,4 @@
-# Nathan-Sharps-CSE210-Project
+# Nathan-Sharp's-CSE210-Project
 This is Nathan's files of the class CSE210
 
 This repository contains the starter code for many different projects. They are arranged as follows:
