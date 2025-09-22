@@ -4,22 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        string game_play = "yes";
-        while (game_play == "yes")
+        string gamePlay = "yes";
+        
+        while (gamePlay == "yes")
         {
-            Random randomgenerator = new Random();
-            int magic_number = randomgenerator.Next(1, 100);
-            int user_guess;
+            Random randomGenerator = new Random();
+            int magicNumber = randomGenerator.Next(1, 100);
+            int userGuess;
             do
             {
                 Console.Write("What is your guess? ");
-                user_guess = int.Parse(Console.ReadLine());
+                userGuess = int.Parse(Console.ReadLine());
 
-                if (user_guess == magic_number)
+                if (userGuess == magicNumber)
                 {
                     Console.WriteLine("You guessed it!");
                 }
-                else if (user_guess <= magic_number)
+                else if (userGuess <= magicNumber)
                 {
                     Console.WriteLine("Higher");
                 }
@@ -27,10 +28,10 @@ class Program
                 {
                     Console.WriteLine("Lower");
                 }
-            } while (user_guess != magic_number);
+            } while (userGuess != magicNumber);
 
             Console.WriteLine("Would You like to play again(yes/no)? ");
-            game_play = Console.ReadLine();
+            gamePlay = Console.ReadLine();
         }
     }
 }
