@@ -67,7 +67,7 @@ public class Journal
 
         // This sets up the entry system to put the strings back into a entry
         // class and back into the entries list.
-        Entry saved_entry = new Entry();
+        Entry savedEntry = new Entry();
 
         // This goes through each line of the lines list and adds the 
         // information back into the entries list.
@@ -79,12 +79,12 @@ public class Journal
             string[] parts = line.Split("|");
 
             // Each part of an entry is added back into the entry's variables.
-            saved_entry._entryDateTime = DateTime.Parse(parts[0]);
-            saved_entry._entryGivenPrompt = parts[1];
-            saved_entry._entryText = parts[2];
+            savedEntry._entryDateTime = DateTime.Parse(parts[0]);
+            savedEntry._entryGivenPrompt = parts[1];
+            savedEntry._entryText = parts[2];
 
             // Then the entry is added back to the list.
-            _entries.Add(saved_entry);
+            _entries.Add(savedEntry);
 
             // This repeats until all the lines have been gone through.
         }
@@ -124,12 +124,12 @@ public class Journal
 
                     // It puts the entry's data into a certain format to load
                     // it later.
-                    string csv_entry = $"{entry._entryDateTime}|" +
+                    string csvEntry = $"{entry._entryDateTime}|" +
                                        $"{entry._entryGivenPrompt}|" +
                                        $"{entry._entryText}";
 
                     // This writes the entry on a new line.
-                    outputFile.WriteLine(csv_entry);
+                    outputFile.WriteLine(csvEntry);
                 }
             }
     }
