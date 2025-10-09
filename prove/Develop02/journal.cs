@@ -65,15 +65,17 @@ public class Journal
         string[] lines = System.IO.File.ReadAllLines(_fileName);
 
 
-        // This sets up the entry system to put the strings back into a entry
-        // class and back into the entries list.
-        Entry savedEntry = new Entry();
+
 
         // This goes through each line of the lines list and adds the 
         // information back into the entries list.
         foreach (string line in lines)
         {
 
+            // This sets up the entry system to put the strings back into a 
+            // entry class and back into the entries list.
+            Entry savedEntry = new Entry();
+        
             // The parts list is a list of the different parts of an entry
             // being splitted by a "|".
             string[] parts = line.Split("|");
