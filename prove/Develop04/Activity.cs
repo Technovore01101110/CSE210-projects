@@ -32,6 +32,7 @@ class Activity
     {
         Console.WriteLine("\nWell done!!");
         Timer.PauseWithAnimation();
+        
         Console.WriteLine($"You have completed another {_duration} seconds of {_title} Activity.");
         Timer.PauseWithAnimation();
     }

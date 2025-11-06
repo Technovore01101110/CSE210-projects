@@ -9,7 +9,6 @@ class ListingActivity : Activity
         };
     private int _entriesCount;
 
-    // Constructor
     public ListingActivity() : base(
         "Listing",
 @"This activity will help you reflect on the good things in your life
@@ -19,6 +18,7 @@ by having you list as many things as you can in a certain area."
     public void RunListingActivity()
     {
         Console.WriteLine("\nList as many responses you can to the following prompt:");
+        
         Random random = new Random();
         string prompt = _prompts[random.Next(0, _prompts.Count)];
         Console.WriteLine($" --- {prompt} ---");
@@ -31,14 +31,17 @@ by having you list as many things as you can in a certain area."
             Thread.Sleep(1000);
         }
         Console.WriteLine("\b \n");
+
         Timer.Set(GetDuration());
 
         while (!Timer.IsExpired())
         {
             Console.Write("> ");
             Console.ReadLine();
+
             _entriesCount += 1;
         }
+        
         Console.WriteLine($"You listed {_entriesCount} items!");
     } 
    

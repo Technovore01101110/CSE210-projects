@@ -52,9 +52,11 @@ how you can use it in other aspects of your life."
         Console.WriteLine("\b ");
 
         Timer.Set(GetDuration());
+        
         while (!Timer.IsExpired()) {
             int IRandomQuestion = random.Next(0, _ReflectQuestions.Count - 1);
             Console.Write($"> {_ReflectQuestions[IRandomQuestion]}  ");
+
             Timer.PauseWithAnimation(rounds: 6);
         }
     }
