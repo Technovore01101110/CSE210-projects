@@ -9,7 +9,7 @@ class ReflectionActivity : Activity
         "Think of a time when you helped someone in need.",
         "Think of a time when you did something truly selfless."
     };
-    private List<string> _ReflectQuestions = new List<string>
+    private List<string> _reflectQuestions = new List<string>
     {
         "Why was this experience meaningful to you?",
         "Have you ever done anything like this before?",
@@ -35,8 +35,8 @@ how you can use it in other aspects of your life."
 
         Random random = new Random();
 
-        int IRandomPrompt = random.Next(0, _prompts.Count - 1);
-        Console.WriteLine($"\n --- {_prompts[IRandomPrompt]} ---\n");
+        int iRandomPrompt = random.Next(0, _prompts.Count - 1);
+        Console.WriteLine($"\n --- {_prompts[iRandomPrompt]} ---\n");
 
         Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
@@ -54,8 +54,8 @@ how you can use it in other aspects of your life."
         Timer.Set(GetDuration());
         
         while (!Timer.IsExpired()) {
-            int IRandomQuestion = random.Next(0, _ReflectQuestions.Count - 1);
-            Console.Write($"> {_ReflectQuestions[IRandomQuestion]}  ");
+            int iRandomQuestion = random.Next(0, _reflectQuestions.Count - 1);
+            Console.Write($"> {_reflectQuestions[iRandomQuestion]}  ");
 
             Timer.PauseWithAnimation(rounds: 6);
         }
