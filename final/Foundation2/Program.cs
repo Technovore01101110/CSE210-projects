@@ -21,8 +21,6 @@ class Program
         songOrder.AddProduct("Healing Potion", 101, 12.50, 3);
         songOrder.AddProduct("Mana Crystal", 202, 45.00, 5);
         songOrder.AddProduct("Shadow Dagger", 303, 120.75, 1);
-        songOrder.AddProduct("Hunter's Cloak", 404, 89.99, 2);
-        songOrder.AddProduct("Dungeon Map Scroll", 505, 15.25, 4);
         orders.Add(songOrder);
 
         foreach(Order order in orders)
