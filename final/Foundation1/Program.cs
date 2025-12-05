@@ -42,8 +42,11 @@ class Program
         {
             Console.WriteLine(SPLITTER);
 
-            currentVideo.DisplayVideo();
-
+            Console.WriteLine($"Title: {currentVideo.GetTitle()}");
+            Console.WriteLine($"By \"{currentVideo.GetAuthor()}\"");
+            Console.WriteLine($"Description: {currentVideo.GetDescription()}");
+            Console.WriteLine($"Video Length: {currentVideo.GetTimeLength()} seconds");
+            Console.WriteLine($"\n{currentVideo.TotalComments()} Comments:\n");
             currentVideo.DisplayComments();
 
             Console.WriteLine(SPLITTER);
